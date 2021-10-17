@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>obs-ndi</Name>
   <Repository>patrickstigler/obs-ndi</Repository>
-  <Registry>https://hub.docker.com/repository/docker/patrickstigler/obs-ndi</Registry>
+  <Registry>https://hub.docker.com/r/patrickstigler/obs-ndi</Registry>
   <Network>br0</Network>
   <MyIP>192.168.192.233</MyIP>
   <Shell>sh</Shell>
