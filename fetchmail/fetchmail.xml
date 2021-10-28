@@ -9,7 +9,10 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/115302-support-fetchmail/</Support>
   <Project>https://github.com/patrickstigler/docker-fetchmail</Project>
-  <Overview>Create the "fetchmailrc" file in the mounted data folder.&#xD;
+  <Overview>Fetchmail is a handy tool to move / copy your emails from another email provider.&#xD;
+Lets say you host your own Mailserver and also want to receive your mails from i.e. googlemail. Fetchmail will take them and put it in your own inbox. &#xD;
+&#xD;
+Create the "fetchmailrc" file in the mounted data folder.&#xD;
 It should contain these lines - but you have to adapt it to fit your needs. i.e. your mail address and remove the "keep" if you want to remove the mails in the fetched remote mailbox.&#xD;
 &#xD;
 &#xD;
@@ -29,10 +32,13 @@ poll imap.gmail.com with proto IMAP&#xD;
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1635420748</DateInstalled>
+  <DateInstalled>1635421008</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>Create the "fetchmailrc" file in the mounted data folder.&#xD;
+  <Description>Fetchmail is a handy tool to move / copy your emails from another email provider.&#xD;
+Lets say you host your own Mailserver and also want to receive your mails from i.e. googlemail. Fetchmail will take them and put it in your own inbox. &#xD;
+&#xD;
+Create the "fetchmailrc" file in the mounted data folder.&#xD;
 It should contain these lines - but you have to adapt it to fit your needs. i.e. your mail address and remove the "keep" if you want to remove the mails in the fetched remote mailbox.&#xD;
 &#xD;
 &#xD;
