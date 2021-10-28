@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>fetchmail</Name>
+  <Repository>patrickstigler/docker-fetchmail</Repository>
+  <Registry>https://hub.docker.com/r/patrickstigler/docker-fetchmail</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/115302-support-fetchmail/</Support>
+  <Project>https://github.com/patrickstigler/docker-fetchmail</Project>
+  <Overview>Create the "fetchmailrc" file in the mounted data folder.&#xD;
+It should contain these lines - but you have to adapt it to fit your needs. i.e. your mail address and remove the "keep" if you want to remove the mails in the fetched remote mailbox.&#xD;
+&#xD;
+&#xD;
+set no syslog&#xD;
+set logfile /data/log/fetchmail.log&#xD;
+&#xD;
+set postmaster "fetchmail"&#xD;
+&#xD;
+poll imap.gmail.com with proto IMAP&#xD;
+  user 'someusername@gmail.com' there with password 'yourpassword' is fetchmail here options fetchall ssl keep&#xD;
+  smtphost mail.example.org&#xD;
+  smtpname some.user@example.org</Overview>
+  <Category>Productivity: Other: Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.fetchmail.info/bighand.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635420748</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Create the "fetchmailrc" file in the mounted data folder.&#xD;
+It should contain these lines - but you have to adapt it to fit your needs. i.e. your mail address and remove the "keep" if you want to remove the mails in the fetched remote mailbox.&#xD;
+&#xD;
+&#xD;
+set no syslog&#xD;
+set logfile /data/log/fetchmail.log&#xD;
+&#xD;
+set postmaster "fetchmail"&#xD;
+&#xD;
+poll imap.gmail.com with proto IMAP&#xD;
+  user 'someusername@gmail.com' there with password 'yourpassword' is fetchmail here options fetchall ssl keep&#xD;
+  smtphost mail.example.org&#xD;
+  smtpname some.user@example.org</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/fetchmail</HostDir>
+      <ContainerDir>/data/etc/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>300</Value>
+      <Name>TIMECRON</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="TIMECRON" Target="TIMECRON" Default="300" Mode="" Description="TIMECRON: Time to Recheck mail, if nothing set it defaults to 300 seconds (which should accept the most mail servers)" Type="Variable" Display="always" Required="false" Mask="false">300</Config>
+  <Config Name="Config" Target="/data/etc/" Default="/mnt/user/appdata/fetchmail" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/fetchmail</Config>
+</Container>
