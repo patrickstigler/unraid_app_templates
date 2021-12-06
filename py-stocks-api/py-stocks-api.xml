@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>py-stocks-api</Name>
-  <Repository>patrickstigler/py-stocks-api</Repository>
+  <Repository>patrickstigler/py-stocks-api:latest</Repository>
   <Registry>https://hub.docker.com/r/patrickstigler/py-stocks-api</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/115021-support-py-stocks-api/</Support>
-  <Project>https://github.55860.com/pinkahd/py-stocks</Project>
+  <Project>https://github.com/pinkahd/py-stocks</Project>
   <Overview>A minimal stocks API wrapper of yfinance.&#xD;
 &#xD;
 Example command:&#xD;
@@ -24,7 +24,7 @@ More Info: https://github.55860.com/pinkahd/py-stocks</Overview>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1634675823</DateInstalled>
+  <DateInstalled>1638812295</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>A minimal stocks API wrapper of yfinance.&#xD;
