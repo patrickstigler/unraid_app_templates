@@ -8,15 +8,13 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/115021-support-py-stocks-api/</Support>
-  <Project>https://github.com/pinkahd/py-stocks</Project>
-  <Overview>A minimal stocks API wrapper of yfinance.&#xD;
+  <Project>https://github.com/patrickstigler/py-stocks</Project>
+  <Overview>A minimal stocks API wrapper of Yfinance.&#xD;
 &#xD;
 Example command:&#xD;
 curl localhost:8000/download/AAPL/2021-08-01/2021-08-03 | jq&#xD;
 &#xD;
-curl localhost:8000/info/AAPL | jq&#xD;
-&#xD;
-More Info: https://github.55860.com/pinkahd/py-stocks</Overview>
+curl localhost:8000/info/AAPL | jq</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT]</WebUI>
   <TemplateURL/>
@@ -24,17 +22,15 @@ More Info: https://github.55860.com/pinkahd/py-stocks</Overview>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1638812295</DateInstalled>
+  <DateInstalled>1638893948</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>A minimal stocks API wrapper of yfinance.&#xD;
+  <Description>A minimal stocks API wrapper of Yfinance.&#xD;
 &#xD;
 Example command:&#xD;
 curl localhost:8000/download/AAPL/2021-08-01/2021-08-03 | jq&#xD;
 &#xD;
-curl localhost:8000/info/AAPL | jq&#xD;
-&#xD;
-More Info: https://github.55860.com/pinkahd/py-stocks</Description>
+curl localhost:8000/info/AAPL | jq</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
