@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MS-SQL-Server</Name>
+  <Repository>mcr.microsoft.com/mssql/server:2019-latest</Repository>
+  <Registry>https://hub.docker.com/_/microsoft-mssql-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15</Support>
+  <Project>https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup?view=sql-server-ver15</Project>
+  <Overview>You have to accept the EULA with "Y" as parameter.</Overview>
+  <Category>Cloud: Productivity: Tools: Network:Other Status:Stable</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://img.icons8.com/color/96/000000/microsoft-sql-server.png</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1639614225</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>You have to accept the EULA with "Y" as parameter.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1433</HostPort>
+        <ContainerPort>1433</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>ACCEPT_EULA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>SA_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Express</Value>
+      <Name>MSSQL_PID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Port" Target="1433" Default="" Mode="tcp" Description="Container Port: 1433" Type="Port" Display="always" Required="false" Mask="false">1433</Config>
+  <Config Name="ACCEPT_EULA" Target="ACCEPT_EULA" Default="" Mode="" Description="Container Variable: ACCEPT_EULA" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SA_PASSWORD" Target="SA_PASSWORD" Default="" Mode="" Description="Container Variable: SA_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="MSSQL_PID" Target="MSSQL_PID" Default="" Mode="" Description="Container Variable: MSSQL_PID" Type="Variable" Display="always" Required="false" Mask="false">Express</Config>
+</Container>
