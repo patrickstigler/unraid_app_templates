@@ -17,7 +17,7 @@
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1639614225</DateInstalled>
+  <DateInstalled>1639614713</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>You have to accept the EULA with "Y" as parameter.</Description>
@@ -31,15 +31,31 @@
       </Port>
     </Publish>
   </Networking>
-  <Data/>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/opt/mssql/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/opt/mssql/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/opt/mssql/secrets</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <Environment>
     <Variable>
-      <Value/>
+      <Value>N</Value>
       <Name>ACCEPT_EULA</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>P@$$W0rd2021!.</Value>
       <Name>SA_PASSWORD</Name>
       <Mode/>
     </Variable>
@@ -51,7 +67,10 @@
   </Environment>
   <Labels/>
   <Config Name="Port" Target="1433" Default="" Mode="tcp" Description="Container Port: 1433" Type="Port" Display="always" Required="false" Mask="false">1433</Config>
-  <Config Name="ACCEPT_EULA" Target="ACCEPT_EULA" Default="" Mode="" Description="Container Variable: ACCEPT_EULA" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="SA_PASSWORD" Target="SA_PASSWORD" Default="" Mode="" Description="Container Variable: SA_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="ACCEPT_EULA" Target="ACCEPT_EULA" Default="" Mode="" Description="Container Variable: ACCEPT_EULA" Type="Variable" Display="always" Required="true" Mask="false">Y</Config>
+  <Config Name="SA_PASSWORD" Target="SA_PASSWORD" Default="" Mode="" Description="Container Variable: SA_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false">P@$$W0rd2021!.</Config>
   <Config Name="MSSQL_PID" Target="MSSQL_PID" Default="" Mode="" Description="Container Variable: MSSQL_PID" Type="Variable" Display="always" Required="false" Mask="false">Express</Config>
+  <Config Name="Data path" Target="/var/opt/mssql/data" Default="" Mode="rw" Description="Container Path: /var/opt/mssql/data" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Log path" Target="/var/opt/mssql/log" Default="" Mode="rw" Description="Container Path: /var/opt/mssql/log" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Secrets path" Target="/var/opt/mssql/secrets" Default="" Mode="rw" Description="Container Path: /var/opt/mssql/secrets" Type="Path" Display="always" Required="false" Mask="false"/>
 </Container>
