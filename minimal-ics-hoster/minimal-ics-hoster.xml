@@ -16,7 +16,7 @@ I use it to provide the Ical to Home Assistant for the garbage collection.</Over
   <Category>HomeAutomation: Productivity: Tools: Network:Web</Category>
   <WebUI>http://[IP]:[PORT:5004]</WebUI>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://github.com/patrickstigler/minimal-ics-host/raw/master/calendaricon.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
   <CPUset/>
