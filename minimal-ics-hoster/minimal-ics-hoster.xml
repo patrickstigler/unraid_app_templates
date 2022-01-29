@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>minimal-ics-hoster</Name>
+  <Repository>patrickstigler/minimal-ics-hoster</Repository>
+  <Registry>https://hub.docker.com/r/patrickstigler/minimal-ics-hoster</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/patrickstigler/minimal-ics-host/tree/master</Project>
+  <Overview>minimal ics / iCal / Calendar hoster, &#xD;
+&#xD;
+is basically just a minimalistic webserver which will just publish the "file.ics" in the data directory.&#xD;
+I use it to provide the Ical to Home Assistant for the garbage collection.</Overview>
+  <Category>HomeAutomation: Productivity: Tools: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:5004]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1643418159</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>minimal ics / iCal / Calendar hoster, &#xD;
+&#xD;
+is basically just a minimalistic webserver which will just publish the "file.ics" in the data directory.&#xD;
+I use it to provide the Ical to Home Assistant for the garbage collection.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5004</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minimal-ics-hoster/</HostDir>
+      <ContainerDir>/app/data/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="5000" Default="5004" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">5004</Config>
+  <Config Name="Config Path" Target="/app/data/" Default="" Mode="rw" Description="Container Path: /data/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/minimal-ics-hoster/</Config>
+</Container>
