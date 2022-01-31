@@ -14,7 +14,7 @@
 is basically just a minimalistic webserver which will just publish the "file.ics" in the data directory.&#xD;
 I use it to provide the Ical to Home Assistant for the garbage collection.</Overview>
   <Category>HomeAutomation: Productivity: Tools: Network:Web</Category>
-  <WebUI>http://[IP]:[PORT:5004]</WebUI>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL/>
   <Icon>https://github.com/patrickstigler/minimal-ics-host/raw/master/calendaricon.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
