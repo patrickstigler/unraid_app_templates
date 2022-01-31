@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>quiz-game</Name>
+  <Repository>patrickstigler/quiz-game</Repository>
+  <Registry>patrickstigler/quiz-game</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/ASKJR/quiz-game</Project>
+  <Overview>Test your General Knowledge in different types of topics. This game is inspired on the show "who wants to be a millionaire?". You must answer correctly 15 questions to become a millionaire. Difficulty ascends as you progress in the game and questions and their categories are randomized each time you start a new match. At the end of your playthrough you can optionally register your score in the ranking, however only the top 10 results will be displayed</Overview>
+  <Category>GameServers: Other: Network:Web</Category>
+  <WebUI>http://[IP]:[PORT:8008]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/ASKJR/quiz-game/raw/master/public/img/icons/android-chrome-maskable-192x192.png</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1643637540</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Test your General Knowledge in different types of topics. This game is inspired on the show "who wants to be a millionaire?". You must answer correctly 15 questions to become a millionaire. Difficulty ascends as you progress in the game and questions and their categories are randomized each time you start a new match. At the end of your playthrough you can optionally register your score in the ranking, however only the top 10 results will be displayed</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8008</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8008</Config>
+</Container>
