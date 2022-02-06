@@ -13,7 +13,7 @@
 &#xD;
 Requires MYSQL Server or MariaDB or Postgress</Overview>
   <Category>Cloud: Productivity: Tools: Other: Network:Web Network:Other</Category>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
   <Icon>https://github.com/patrickstigler/unraid_app_templates/raw/main/facturaScripts/facturascripts.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
