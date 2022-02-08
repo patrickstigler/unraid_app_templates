@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>breitbandmessung-de</Name>
+  <Repository>shneezin/breitbandmessung-node</Repository>
+  <Registry>https://hub.docker.com/r/shneezin/breitbandmessung-node</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/shneezin/breitbandmessung-node</Support>
+  <Project>https://github.com/shneezin/breitbandmessung-node</Project>
+  <Overview>A script to enable customers of lazy ISPs to perform measurement campaigns of the connection speed as described here in an automated way.&#xD;
+&#xD;
+https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Breitband/Breitbandmessung/start.html</Overview>
+  <Category>HomeAutomation: Productivity: Tools: Other: Network:Management Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.bundesnetzagentur.de/SiteGlobals/StyleBundles2/Bilder/auto/logo.svg?__blob=normal&amp;amp;v=5</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644351119</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A script to enable customers of lazy ISPs to perform measurement campaigns of the connection speed as described here in an automated way.&#xD;
+&#xD;
+https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Breitband/Breitbandmessung/start.html</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/breitbandmessung-de/config/</HostDir>
+      <ContainerDir>/usr/src/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/breitbandmessung-de/logs/</HostDir>
+      <ContainerDir>/export/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config Path" Target="/usr/src/app/config" Default="" Mode="rw" Description="Container Path: /usr/src/app/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/breitbandmessung-de/config/</Config>
+  <Config Name="Messurement Logs" Target="/export/" Default="" Mode="rw" Description="Container Path: /export/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/breitbandmessung-de/logs/</Config>
+</Container>
