@@ -11,20 +11,38 @@
   <Project>https://github.com/shneezin/breitbandmessung-node</Project>
   <Overview>A script to enable customers of lazy ISPs to perform measurement campaigns of the connection speed as described here in an automated way.&#xD;
 &#xD;
-https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Breitband/Breitbandmessung/start.html</Overview>
-  <Category>HomeAutomation: Productivity: Tools: Other: Network:Management Network:Other</Category>
+https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Breitband/Breitbandmessung/start.html&#xD;
+&#xD;
+Go to the Config directory and create a file called "config.cfg" with the content:&#xD;
+&#xD;
+timezone=Europe/Berlin&#xD;
+crontab=0 * * * *&#xD;
+run_once=true&#xD;
+run_on_startup=true&#xD;
+&#xD;
+For a hourly cronjob to check your connection.</Overview>
+  <Category>HomeAutomation: Productivity: Tools:Utilities Other: Network:Management Network:Other</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/breitbandmessung-de/breitbandmessung-de.xml</TemplateURL>
   <Icon>https://www.bundesnetzagentur.de/SiteGlobals/StyleBundles2/Bilder/auto/logo.svg?__blob=normal&amp;amp;v=5</Icon>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1644351119</DateInstalled>
+  <DateInstalled>1644358044</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>A script to enable customers of lazy ISPs to perform measurement campaigns of the connection speed as described here in an automated way.&#xD;
 &#xD;
-https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Breitband/Breitbandmessung/start.html</Description>
+https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Breitband/Breitbandmessung/start.html&#xD;
+&#xD;
+Go to the Config directory and create a file called "config.cfg" with the content:&#xD;
+&#xD;
+timezone=Europe/Berlin&#xD;
+crontab=0 * * * *&#xD;
+run_once=true&#xD;
+run_on_startup=true&#xD;
+&#xD;
+For a hourly cronjob to check your connection.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish/>
