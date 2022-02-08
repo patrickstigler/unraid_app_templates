@@ -11,7 +11,7 @@
   <Project>https://github.com/ASKJR/quiz-game</Project>
   <Overview>Test your General Knowledge in different types of topics. This game is inspired on the show "who wants to be a millionaire?". You must answer correctly 15 questions to become a millionaire. Difficulty ascends as you progress in the game and questions and their categories are randomized each time you start a new match. At the end of your playthrough you can optionally register your score in the ranking, however only the top 10 results will be displayed</Overview>
   <Category>GameServers: Other: Network:Web</Category>
-  <WebUI>http://[IP]:[PORT:8008]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL/>
   <Icon>https://github.com/ASKJR/quiz-game/raw/master/public/img/icons/android-chrome-maskable-192x192.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
