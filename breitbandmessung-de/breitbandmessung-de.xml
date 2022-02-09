@@ -16,7 +16,7 @@ https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_In
 Go to the Config directory and create a file called "config.cfg" with the content:&#xD;
 &#xD;
 timezone=Europe/Berlin&#xD;
-crontab=0 * * * *&#xD;
+crontab=* */2 * * *&#xD;
 run_once=true&#xD;
 run_on_startup=true&#xD;
 &#xD;
@@ -28,7 +28,7 @@ For a hourly cronjob to check your connection.</Overview>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1644358044</DateInstalled>
+  <DateInstalled>1644420840</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>A script to enable customers of lazy ISPs to perform measurement campaigns of the connection speed as described here in an automated way.&#xD;
@@ -38,7 +38,7 @@ https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_In
 Go to the Config directory and create a file called "config.cfg" with the content:&#xD;
 &#xD;
 timezone=Europe/Berlin&#xD;
-crontab=0 * * * *&#xD;
+crontab=* */2 * * *&#xD;
 run_once=true&#xD;
 run_on_startup=true&#xD;
 &#xD;
