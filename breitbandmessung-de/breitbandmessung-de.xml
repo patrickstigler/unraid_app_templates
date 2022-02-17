@@ -21,7 +21,7 @@ run_once=true&#xD;
 run_on_startup=true&#xD;
 &#xD;
 For a hourly cronjob to check your connection.</Overview>
-  <Category>HomeAutomation: Productivity: Tools:Utilities Other: Network:Management Network:Other</Category>
+  <Category>HomeAutomation: Productivity: Tools:Utilities Other: Network:Management Network:Other:Other Status:Beta</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/breitbandmessung-de/breitbandmessung-de.xml</TemplateURL>
   <Icon>https://www.bundesnetzagentur.de/SiteGlobals/StyleBundles2/Bilder/auto/logo.svg?__blob=normal&amp;amp;v=5</Icon>
