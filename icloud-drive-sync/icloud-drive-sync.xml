@@ -25,7 +25,7 @@ icloud --username=&amp;lt;icloud-username&amp;gt; --session-directory=/app/sessi
   <ExtraParams>--restart always</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1649430166</DateInstalled>
+  <DateInstalled>1649447546</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This container will DOWNLOAD (not upload - yet) all your files / photos from iCloud.&#xD;
@@ -48,13 +48,26 @@ icloud --username=&amp;lt;icloud-username&amp;gt; --session-directory=/app/sessi
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/iCloudDrive/</HostDir>
-      <ContainerDir>/app/drive</ContainerDir>
+      <HostDir>/mnt/user/icloud-drive-sync/</HostDir>
+      <ContainerDir>/app/icloud/drive</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
   <Config Name="Config Path" Target="/app/config.yaml" Default="/mnt/user/appdata/icloud-drive-sync/config.yaml" Mode="rw" Description="Container Path: /app/config.yaml" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/icloud-drive-sync/config.yaml</Config>
-  <Config Name="Drive Path" Target="/app/drive" Default="/mnt/user/iCloudDrive/" Mode="rw" Description="Container Path: /app/drive" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/iCloudDrive/</Config>
+  <Config Name="Drive Path" Target="/app/icloud/drive" Default="" Mode="rw" Description="Container Path: /app/icloud/drive" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/icloud-drive-sync/</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
 </Container>
