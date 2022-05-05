@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>fluidd</Name>
+  <Repository>cadriel/fluidd</Repository>
+  <Registry>https://hub.docker.com/r/cadriel/fluidd</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/fluidd-core/fluidd</Project>
+  <Overview>Fluidd is a free and open-source Klipper web interface for managing your 3d printer.</Overview>
+  <Category>Productivity: Tools: Other: Network:Web Network:Management Network:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/fluidd-core/fluidd/develop/public/logo_fluidd.svg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1651757142</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Fluidd is a free and open-source Klipper web interface for managing your 3d printer.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Port" Target="80" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+</Container>
