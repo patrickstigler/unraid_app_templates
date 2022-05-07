@@ -15,7 +15,7 @@ You should be able to connect to Moonraker over the network.&#xD;
 Copy the config in your configuration Path:&#xD;
 https://raw.githubusercontent.com/fluidd-core/fluidd/develop/server/config.json</Overview>
   <Category>Productivity: Other: Network:Web Network:Management Network:Other Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:8741]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/master/fluidd/fluidd.xml</TemplateURL>
   <Icon>https://docs.fluidd.xyz/favicon.ico</Icon>
   <ExtraParams/>
