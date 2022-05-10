@@ -15,7 +15,7 @@ This server will process the python files into threejs files.&#xD;
 &#xD;
 curl -X POST --data-binary "@./examples/test.py"  [unraidIP]:5097</Overview>
   <Category>Productivity: Tools: Other: Network:Other</Category>
-  <WebUI>http://[IP]:[PORT:5097]</WebUI>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL/>
   <Icon>https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_120,h_120/https:/dashboard.snapcraft.io/site_media/appmedia/2020/05/logo.png</Icon>
   <ExtraParams/>
