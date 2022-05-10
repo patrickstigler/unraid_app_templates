@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cadquery-server</Name>
+  <Repository>cadquery/cadquery-server</Repository>
+  <Registry>https://hub.docker.com/r/cadquery/cadquery-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/CadQuery/cadquery</Support>
+  <Project>https://github.com/roipoussiere/cadquery</Project>
+  <Overview>CadQuery is an intuitive, easy-to-use Python module for building parametric 3D CAD models. Using CadQuery, you can write short, simple scripts that produce high quality CAD models. It is easy to make many different objects using a single script that can be customized.&#xD;
+&#xD;
+This server will process the python files into 3d files.</Overview>
+  <Category>Productivity: Tools: Other: Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:5097]</WebUI>
+  <TemplateURL/>
+  <Icon>https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_120,h_120/https:/dashboard.snapcraft.io/site_media/appmedia/2020/05/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1652184321</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>CadQuery is an intuitive, easy-to-use Python module for building parametric 3D CAD models. Using CadQuery, you can write short, simple scripts that produce high quality CAD models. It is easy to make many different objects using a single script that can be customized.&#xD;
+&#xD;
+This server will process the python files into 3d files.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5097</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="WebGUI" Target="5000" Default="" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">5097</Config>
+</Container>
