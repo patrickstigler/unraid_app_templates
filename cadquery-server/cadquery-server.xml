@@ -11,7 +11,7 @@
   <Project>https://github.com/roipoussiere/cadquery</Project>
   <Overview>CadQuery is an intuitive, easy-to-use Python module for building parametric 3D CAD models. Using CadQuery, you can write short, simple scripts that produce high quality CAD models. It is easy to make many different objects using a single script that can be customized.&#xD;
 &#xD;
-This server will process the python files into 3d files.&#xD;
+This server will process the python files into threejs files.&#xD;
 &#xD;
 curl -X POST --data-binary "@./examples/test.py"  [unraidIP]:5097</Overview>
   <Category>Productivity: Tools: Other: Network:Other</Category>
