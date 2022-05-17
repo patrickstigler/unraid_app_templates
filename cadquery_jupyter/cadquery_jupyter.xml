@@ -19,7 +19,7 @@ With CadQuery Jupyter you can design / code your models in the browser. View, an
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1652797833</DateInstalled>
+  <DateInstalled>1652798020</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>CadQuery is an intuitive, easy-to-use Python module for building parametric 3D CAD models. Using CadQuery, you can write short, simple scripts that produce high quality CAD models. It is easy to make many different objects using a single script that can be customized.&#xD;
@@ -38,12 +38,12 @@ With CadQuery Jupyter you can design / code your models in the browser. View, an
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/cadquery_jupyter/</HostDir>
-      <ContainerDir>/home/cp</ContainerDir>
+      <ContainerDir>/home/cq</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
   <Labels/>
-  <Config Name="Workdir" Target="/home/cp" Default="" Mode="rw" Description="Container Path: /home/cp" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cadquery_jupyter/</Config>
+  <Config Name="Workdir" Target="/home/cq" Default="" Mode="rw" Description="Container Path: /home/cp" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/cadquery_jupyter/</Config>
   <Config Name="WebUI" Target="8888" Default="" Mode="tcp" Description="Container Port: 8888" Type="Port" Display="always" Required="false" Mask="false">8888</Config>
 </Container>
