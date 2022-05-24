@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>mainsail</Name>
+  <Repository>ghcr.io/mainsail-crew/mainsail</Repository>
+  <Registry>https://github.com/mainsail-crew/mainsail</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://docs.mainsail.xyz/</Support>
+  <Project>https://github.com/mainsail-crew/mainsail</Project>
+  <Overview>Mainsail makes Klipper more accessible by adding a lightweight, responsive web user interface, centred around an intuitive and consistent design philosophy.&#xD;
+&#xD;
+Download config.json BEFORE you start your container&#xD;
+https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/main/mainsail/config.json&#xD;
+&#xD;
+And put it in your config folder, the default is /mnt/user/appdata/mainsail/config.json&#xD;
+&#xD;
+Happy printing</Overview>
+  <Category>Productivity: Tools: Other: Network:Web Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8099]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/mainsail-crew/docs/master/assets/img/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1653403050</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Mainsail makes Klipper more accessible by adding a lightweight, responsive web user interface, centred around an intuitive and consistent design philosophy.&#xD;
+&#xD;
+Download config.json BEFORE you start your container&#xD;
+https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/main/mainsail/config.json&#xD;
+&#xD;
+And put it in your config folder, the default is /mnt/user/appdata/mainsail/config.json&#xD;
+&#xD;
+Happy printing</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8099</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mainsail/config.json</HostDir>
+      <ContainerDir>/usr/share/nginx/html/config.json</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="WebUI" Target="80" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8099</Config>
+  <Config Name="Config Path" Target="/usr/share/nginx/html/config.json" Default="" Mode="rw" Description="Container Path: /usr/share/nginx/html/config.json" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/mainsail/config.json</Config>
+</Container>
