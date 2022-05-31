@@ -38,7 +38,7 @@ With CadQuery Jupyter you can design / code your models in the browser. View, an
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/cadquery_jupyter/</HostDir>
-      <ContainerDir>/home/cq</ContainerDir>
+      <ContainerDir>/home/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
