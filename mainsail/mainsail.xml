@@ -18,7 +18,7 @@ And put it in your config folder, the default is /mnt/user/appdata/mainsail/conf
 &#xD;
 Happy printing</Overview>
   <Category>Productivity: Tools: Other: Network:Web Network:Other</Category>
-  <WebUI>http://[IP]:[PORT:8099]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/mainsail-crew/docs/master/assets/img/logo.png</Icon>
   <ExtraParams/>
