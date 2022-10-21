@@ -11,7 +11,7 @@
   <Project>https://github.com/patrickstigler/docker-obs-ndi</Project>
   <Overview>The OBS with NDI is incorporated into the container and can be used to stream your desktop. &#xD;
 &#xD;
-With the latetest OBS version the is support for obs-websocket.&#xD;
+With the latetest OBS version the is support for obs-websocket and Intel quicksync&#xD;
 &#xD;
 You can change the default VNC password of '123456' on the docker run command to whatever you wish.&#xD;
 You can connect with your own VNC client at 5900 or use the webclient at 5901</Overview>
