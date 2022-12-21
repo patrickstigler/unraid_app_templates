@@ -27,7 +27,7 @@ You can connect with your own VNC client at 5901 or use the webclient at 6901</O
   <DonateLink/>
   <Requires/>
   <Config Name="Config Path" Target="/config/obs-studio" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/obs</Config>
-  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">GPU-XXXXXXXXXXXXXXXXX</Config>
+  <Config Name="NVIDIA_VISIBLE_DEVICES" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Required for Nvidia GPU support. In case you use something else - delete this entry." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="NVIDIA_DRIVER_CAPABILITIES" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">all</Config>
   <Config Name="Port for obs-websocket" Target="4455" Default="4455" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4455</Config>
   <Config Name="novnc" Target="6901" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6901</Config>
