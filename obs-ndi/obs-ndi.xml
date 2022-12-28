@@ -22,7 +22,7 @@ You can connect with your own VNC client at 5901 or use the webclient at 6901</O
   <ExtraParams>--runtime=nvidia</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1671645653</DateInstalled>
+  <DateInstalled>1672189923</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
@@ -32,6 +32,7 @@ You can connect with your own VNC client at 5901 or use the webclient at 6901</O
   <Config Name="Port for obs-websocket" Target="4455" Default="4455" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4455</Config>
   <Config Name="novnc" Target="6901" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6901</Config>
   <Config Name="Vnc" Target="5901" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5901</Config>
+  <Config Name="VNC Password" Target="VNC_PW" Default="" Mode="" Description="Set your VNC password" Type="Variable" Display="always" Required="false" Mask="true">headless</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
