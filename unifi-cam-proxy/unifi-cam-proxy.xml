@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>unifi-cam-proxy</Name>
+  <Repository>keshavdv/unifi-cam-proxy:dev</Repository>
+  <Registry>https://github.com/keshavdv/unifi-cam-proxy/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/keshavdv/unifi-cam-proxy/issues</Support>
+  <Project>https://unifi-cam-proxy.com/</Project>
+  <Overview>SSH to your config folder (/mnt/user/appdata/unifi-cam-proxy)&#xD;
+&#xD;
+Run:&#xD;
+&#xD;
+openssl ecparam -out /tmp/private.key -name prime256v1 -genkey -noout&#xD;
+openssl req -new -sha256 -key /tmp/private.key -out /tmp/server.csr -subj "/C=TW/L=Taipei/O=Ubiquiti Networks Inc./OU=devint/CN=camera.ubnt.dev/emailAddress=support@ubnt.com"&#xD;
+openssl x509 -req -sha256 -days 36500 -in /tmp/server.csr -signkey /tmp/private.key -out /tmp/public.key&#xD;
+cat /tmp/private.key /tmp/public.key &amp;gt; client.pem&#xD;
+rm -f /tmp/private.key /tmp/public.key /tmp/server.csr&#xD;
+&#xD;
+to create an cert for your cam.&#xD;
+&#xD;
+Get a token: https://{NVR IP}/proxy/protect/api/cameras/manage-payload&#xD;
+&#xD;
+Modify the Post Parameters to your needs. (check documentation)</Overview>
+  <Category>HomeAutomation: Productivity: Network:Proxy Network:Privacy Network:Other Status:Beta</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs>unifi-cam-proxy --host NVRIP --cert /client.pem --token yourToken rtsp -s rtsp://admin:PASSWORD@192.168.100.210:554/h264Preview_01_main --ffmpeg-args='-c:v copy -bsf:v "h264_metadata=tick_rate=60000/1001" -ar 32000 -ac 1 -codec:a aac -b:a 32k'</PostArgs>
+  <CPUset/>
+  <DateInstalled>1704818315</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config" Target="/client.pem" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/unifi-cam-proxy/client.pem</Config>
+</Container>
