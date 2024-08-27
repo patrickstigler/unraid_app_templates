@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>youtubetranscripttoarticle</Name>
+  <Name>youtube-transcript-to-article</Name>
   <Repository>patrickstigler/youtube-transcript-to-article</Repository>
   <Registry>https://github.com/patrickstigler/youtube-transcript-to-article</Registry>
   <Network>bridge</Network>
