@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>youtube-transcript-to-article</Name>
-  <Repository>patrickstigler/youtube-transcript-to-article</Repository>
+  <Repository>patrickstigler/youtube-transcript-to-article:dev</Repository>
   <Registry>https://github.com/patrickstigler/youtube-transcript-to-article</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -9,21 +9,36 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://github.com/patrickstigler/youtube-transcript-to-article</Project>
-  <Overview>YouTube Transcript to Article is a Docker-based Python project that provides an API for converting YouTube transcripts into professional articles using OpenAI's ChatGPT. This tool automates the creation of summaries or detailed articles from YouTube video content, making it easy to generate professional write-ups from video transcripts.&#xD;
+  <Overview>YouTube Transcript to Article&#xD;
+YouTube Transcript to Article is a Docker-based Python project that provides an API for converting YouTube transcripts into professional articles using OpenAI's ChatGPT. This tool automates the creation of summaries or detailed articles from YouTube video content, making it easy to generate professional write-ups from video transcripts.&#xD;
 &#xD;
+Features&#xD;
+Automatic Transcript Retrieval: Fetches the transcript of a YouTube video in its original language, handling both video URLs and IDs.&#xD;
+Article Generation: Generates a professional article from the transcript, with options for brief or detailed formats.&#xD;
+Customizable Output Language: Allows you to specify the output language, with the default being the video's language.&#xD;
+Minimalist Web Interface: Provides a simple, user-friendly web interface to easily input video IDs or URLs and generate articles.&#xD;
+Dockerized Deployment: Easy deployment with Docker, including integration options for Home Assistant and MQTT.&#xD;
 &#xD;
 You will need a OpenAI API key.</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:5000]</WebUI>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/patrickstigler/youtube-transcript-to-article/main/img/favicon.ico</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1724781167</DateInstalled>
+  <DateInstalled>1724861866</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="OPENAI_API_KEY" Target="OPENAI_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true">YOUR-OPENAO-API-KEY</Config>
+  <Config Name="OPENAI_API_KEY" Target="OPENAI_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true">YOUR_API_KEY</Config>
   <Config Name="Port" Target="5000" Default="5000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
+  <Config Name="MQTT_ACTIVE" Target="MQTT_ACTIVE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="MQTT_BROKER" Target="MQTT_BROKER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">YOUR_MQTT_BROKER</Config>
+  <Config Name="MQTT_PORT" Target="MQTT_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
+  <Config Name="MQTT_TOPIC_SUB" Target="MQTT_TOPIC_SUB" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">video/input</Config>
+  <Config Name="MQTT_TOPIC_PUB" Target="MQTT_TOPIC_PUB" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">video/output</Config>
+  <Config Name="MQTT_CLIENT_ID" Target="MQTT_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">youtube_article_generator</Config>
+  <Config Name="MQTT_USERNAME" Target="MQTT_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MQTT_PASSWORD" Target="MQTT_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>
