@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Qdrant</Name>
+  <Repository>qdrant/qdrant</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://qdrant.tech/</Support>
+  <Project>https://github.com/qdrant/qdrant</Project>
+  <Overview>Qdrant (read: quadrant) is a vector similarity search engine and vector database. It provides a production-ready service with a convenient API to store, search, and manage points&#x2014;vectors with an additional payload Qdrant is tailored to extended filtering support. It makes it useful for all sorts of neural-network or semantic-based matching, faceted search, and other applications.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/refs/heads/main/cadquery-server/qdrant.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1727204608</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Port" Target="6333" Default="6333" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">6333</Config>
+  <Config Name="Config" Target="/qdrant/storage" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qdrant</Config>
+</Container>
