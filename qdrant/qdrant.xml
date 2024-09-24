@@ -13,7 +13,7 @@
   <Category/>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/refs/heads/main/cadquery-server/qdrant.png</Icon>
+  <Icon>https://raw.githubusercontent.com/patrickstigler/unraid_app_templates/refs/heads/main/qdrant/qdrant.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
