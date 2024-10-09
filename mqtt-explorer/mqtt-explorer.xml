@@ -1,1 +1,41 @@
-
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MQTTExplorer</Name>
+  <Repository>smeagolworms4/mqtt-explorer</Repository>
+  <Registry>https://hub.docker.com/r/smeagolworms4/mqtt-explorer</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://mqtt-explorer.com/</Support>
+  <Project>https://github.com/Smeagolworms4/MQTT-Explorer</Project>
+  <Overview>MQTT Explorer is a comprehensive MQTT client that provides a structured overview of your MQTT topics and makes working with devices/services on your broker dead-simple.&#xD;
+&#xD;
+Features:&#xD;
+Visualize topics and topic activity&#xD;
+Delete retained topics&#xD;
+Search/filter topics&#xD;
+Delete topics recursively&#xD;
+Diff view of current and previous received messages&#xD;
+Publish topics&#xD;
+Plot numeric topics&#xD;
+Retain a history of each topic</Overview>
+  <Category>Tools: Network:Management Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:4000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/patrickstigler/unraid_app_templates/blob/main/mqtt-explorer/icon.png?raw=true</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1728481593</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="HTTP_PORT" Target="4000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">4000</Config>
+  <Config Name="CONFIG_PATH" Target="/mqtt-explorer/config" Default="/mnt/user/appdata/mqtt-explorer" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/mqtt-explorer</Config>
+  <Config Name="HTTP_USER" Target="HTTP_USER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="HTTP_PASSWORD" Target="HTTP_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SSL_KEY_PATH" Target="SSL_KEY_PATH" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="SSL_CERT_PATH" Target="SSL_CERT_PATH" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="INITIAL_CONFIG" Target="INITIAL_CONFIG" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>
