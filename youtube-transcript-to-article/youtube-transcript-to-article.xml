@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>youtube-transcript-to-article</Name>
   <Repository>patrickstigler/youtube-transcript-to-article</Repository>
-  <Registry>https://github.com/patrickstigler/youtube-transcript-to-article</Registry>
+  <Registry/>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -10,35 +10,35 @@
   <Support/>
   <Project>https://github.com/patrickstigler/youtube-transcript-to-article</Project>
   <Overview>YouTube Transcript to Article&#xD;
-YouTube Transcript to Article is a Docker-based Python project that provides an API for converting YouTube transcripts into professional articles using OpenAI's ChatGPT. This tool automates the creation of summaries or detailed articles from YouTube video content, making it easy to generate professional write-ups from video transcripts.&#xD;
+Turn YouTube captions into structured Markdown via an OpenAI-compatible model (OpenAI or LocalAI). Web UI and HTTP API; optional MCP mode returns transcript and video metadata only (no LLM in the container).&#xD;
 &#xD;
 Features&#xD;
-Automatic Transcript Retrieval: Fetches the transcript of a YouTube video in its original language, handling both video URLs and IDs.&#xD;
-Article Generation: Generates a professional article from the transcript, with options for brief or detailed formats.&#xD;
-Customizable Output Language: Allows you to specify the output language, with the default being the video's language.&#xD;
-Minimalist Web Interface: Provides a simple, user-friendly web interface to easily input video IDs or URLs and generate articles.&#xD;
-Dockerized Deployment: Easy deployment with Docker, including integration options for Home Assistant and MQTT.&#xD;
+Transcripts from URL or ID; depth levels (brief through comprehensive); optional word-target summaries; default or per-request model; OpenAI or LocalAI; simple web UI.&#xD;
 &#xD;
-You will need a OpenAI API key.</Overview>
-  <Category>Productivity: Tools:</Category>
-  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+For the web/API container you need an OpenAI API key (or LocalAI with optional key). MCP mode does not require OPENAI_API_KEY in the container.&#xD;
+&#xD;
+Image: Docker Hub patrickstigler/youtube-transcript-to-article — or GHCR ghcr.io/patrickstigler/youtube-transcript-to-article (set Repository to that and Registry to https://ghcr.io if you use GitHub Container Registry).</Overview>
+  <Category>AI: Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:5000]/</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/patrickstigler/youtube-transcript-to-article/main/img/favicon.ico</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1724861866</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="OPENAI_API_KEY" Target="OPENAI_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="true">YOUR_API_KEY</Config>
-  <Config Name="Port" Target="5000" Default="5000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
-  <Config Name="MQTT_ACTIVE" Target="MQTT_ACTIVE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="MQTT_BROKER" Target="MQTT_BROKER" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">YOUR_MQTT_BROKER</Config>
-  <Config Name="MQTT_PORT" Target="MQTT_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1883</Config>
-  <Config Name="MQTT_TOPIC_SUB" Target="MQTT_TOPIC_SUB" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">video/input</Config>
-  <Config Name="MQTT_TOPIC_PUB" Target="MQTT_TOPIC_PUB" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">video/output</Config>
-  <Config Name="MQTT_CLIENT_ID" Target="MQTT_CLIENT_ID" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">youtube_article_generator</Config>
-  <Config Name="MQTT_USERNAME" Target="MQTT_USERNAME" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="MQTT_PASSWORD" Target="MQTT_PASSWORD" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="OPENAI_API_KEY" Target="OPENAI_API_KEY" Default="" Mode="" Description="Required when APP_MODE=flask and using OpenAI (DEFAULT_MODEL_HOST=openai). Optional for LocalAI." Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="APP_MODE" Target="APP_MODE" Default="flask" Mode="" Description="flask = web UI + API (port 5000). mcp = Model Context Protocol server (use MCP port mapping when using streamable-http)." Type="Variable" Display="always" Required="false" Mask="false">flask</Config>
+  <Config Name="DEFAULT_MODEL_HOST" Target="DEFAULT_MODEL_HOST" Default="openai" Mode="" Description="openai or localai" Type="Variable" Display="advanced" Required="false" Mask="false">openai</Config>
+  <Config Name="DEFAULT_MODEL" Target="DEFAULT_MODEL" Default="gpt-4o-mini" Mode="" Description="Default model id when the client omits model" Type="Variable" Display="advanced" Required="false" Mask="false">gpt-4o-mini</Config>
+  <Config Name="OPENAI_BASE_URL" Target="OPENAI_BASE_URL" Default="" Mode="" Description="Optional OpenAI-compatible API base (must resolve to /v1). Leave empty for default OpenAI." Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+  <Config Name="LOCALAI_BASE_URL" Target="LOCALAI_BASE_URL" Default="http://host.docker.internal:8080/v1" Mode="" Description="LocalAI base URL when DEFAULT_MODEL_HOST=localai" Type="Variable" Display="advanced" Required="false" Mask="false">http://host.docker.internal:8080/v1</Config>
+  <Config Name="LOCALAI_API_KEY" Target="LOCALAI_API_KEY" Default="" Mode="" Description="Optional; falls back to OPENAI_API_KEY" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+  <Config Name="OPENAI_TIMEOUT" Target="OPENAI_TIMEOUT" Default="180" Mode="" Description="Seconds for model requests" Type="Variable" Display="advanced" Required="false" Mask="false">180</Config>
+  <Config Name="HTTP_REQUEST_TIMEOUT" Target="HTTP_REQUEST_TIMEOUT" Default="30" Mode="" Description="Seconds for YouTube metadata requests" Type="Variable" Display="advanced" Required="false" Mask="false">30</Config>
+  <Config Name="MAX_TRANSCRIPT_CHARS" Target="MAX_TRANSCRIPT_CHARS" Default="120000" Mode="" Description="Max transcript length sent to the model" Type="Variable" Display="advanced" Required="false" Mask="false">120000</Config>
+  <Config Name="MCP_TRANSPORT" Target="MCP_TRANSPORT" Default="streamable-http" Mode="" Description="When APP_MODE=mcp: streamable-http (default in image) or stdio" Type="Variable" Display="advanced" Required="false" Mask="false">streamable-http</Config>
+  <Config Name="FASTMCP_PORT" Target="FASTMCP_PORT" Default="8000" Mode="" Description="Container listen port for MCP streamable-http; add a Port mapping 8000→8000 in Unraid when APP_MODE=mcp" Type="Variable" Display="advanced" Required="false" Mask="false">8000</Config>
+  <Config Name="Web UI port" Target="5000" Default="5000" Mode="tcp" Description="Flask web UI and API (APP_MODE=flask)" Type="Port" Display="always" Required="false" Mask="false">5000</Config>
 </Container>
